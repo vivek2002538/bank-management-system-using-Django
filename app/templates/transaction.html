@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        acc_num: <input type="text" name="acc" id=""><br><br>
+        pin : <input type="number" name="pin" id=""><br><br>
+        amount: <input type="number" name="amt" id=""><br><br>
+        {% if flag %}
+        <button type="submit">withdraw</button>
+        {% else %}
+        <button type="submit">Deposit</button>
+        {% endif %}
+    </form><br><br>
+    {{msg}}
+    {% endblock %}
+</body>
+</html>

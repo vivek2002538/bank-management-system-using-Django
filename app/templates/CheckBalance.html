@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h1>Check Balance</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        ACC : <input type="number" name="acc" id=""><br><br>
+        PIN : <input type="number" name="pin" id=""><br><br>
+        <button type="submit">Check Balance</button>
+    </form>
+    {{msg}}
+    {% endblock %}
+</body>
+</html>

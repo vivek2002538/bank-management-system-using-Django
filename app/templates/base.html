@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bank Management System</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+<h1>Bank Management System</h1>
+
+<div class="container">
+<div class="navbar">
+    <a href="{% url 'home' %}" class="home-button">🏠 Home</a>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+</body>
+</html>

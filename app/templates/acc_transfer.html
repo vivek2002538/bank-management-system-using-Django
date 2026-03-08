@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Account Number of sender</label><input type="number" name="acc" id=""><br> <br>
+        <label for="">Account Number of receiver</label><input type="number" name="t_acc" id=""><br> <br>
+        <label for="">PIN</label><input type="number" name="pin" id=""><br> <br>
+        <label for="">AMOUNT</label><input type="number" name="amt" id=""><br> <br>
+        <button type="submit">Transfer</button>
+    </form>
+    {{msg}}
+    {% endblock %}
+</body>
+</html>
